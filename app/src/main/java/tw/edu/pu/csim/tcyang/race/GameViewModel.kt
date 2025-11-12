@@ -9,6 +9,14 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class GameViewModel: ViewModel() {
+    var score by mutableStateOf(0)
+        private set
+
+    // 當紅色圓碰到右邊邊界時呼叫此方法
+    fun increaseScore() {
+        score += 1
+    }
+
 
     var screenWidthPx by mutableStateOf(0f)
         private set
